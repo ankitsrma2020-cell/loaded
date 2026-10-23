@@ -1,7 +1,7 @@
 """A small, dependency-free button component for terminal applications."""
 
-from collections.abc import Callable
 from dataclasses import dataclass
+from typing import Callable, Optional
 
 
 @dataclass
@@ -15,7 +15,7 @@ class Button:
     """
 
     label: str
-    on_click: Callable[[], None] | None = None
+    on_click: Optional[Callable[[], None]] = None
     disabled: bool = False
 
     def __post_init__(self) -> None:
