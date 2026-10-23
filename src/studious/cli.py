@@ -3,7 +3,8 @@
 import argparse
 
 
-def build_parser() ->gumentParser(description="A basic Python project")
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="A basic Python project")
     parser.add_argument(
         "--name",
         defaul
