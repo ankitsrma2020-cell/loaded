@@ -7,7 +7,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="A basic Python project")
     parser.add_argument(
         "--name",
-        defaul
+        default="world",
+        help="name to greet (default: world)",
+    )
+    return parser
+
 
 def main() -> None:
     args = build_parser().parse_args()
