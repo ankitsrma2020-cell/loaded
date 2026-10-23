@@ -12,4 +12,8 @@ def test_custom_name() -> None:
 
 
 def test_main_prints_greeting(monkeypatch, capsys) -> None:
-   
+    monkeypatch.setattr("sys.argv", ["studious", "--name", "Ada"])
+
+    main()
+
+    assert capsys.readouterr().out == "Hello, Ada!\n"
